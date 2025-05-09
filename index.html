@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Setting character encoding for the document -->
     <meta charset="UTF-8">
@@ -8,23 +9,27 @@
     <!-- Defining the page title -->
     <title>Payment Form</title>
     <!-- Importing Bootstrap CSS for styling -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome 6.6.0 CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Linking custom stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-light">
     <!-- Centering content vertically and horizontally -->
     <div class="container vh-100 d-flex align-items-center justify-content-center">
         <div class="card shadow-sm w-100">
             <!-- Card header with title -->
             <div class="card-header border-bottom">
-                <h1 class="card-title">Payment form example</h1>
+                <h2 class="card-title">Payment form example</h2>
             </div>
             <div class="card-body">
                 <div class="alert alert-danger" role="alert">
-                    some fields are missing
+                    Some fields are missing
                 </div>
                 <!-- Input for card number -->
                 <div class="row mb-3 mx-0">
@@ -53,70 +58,132 @@
                     </div>
                 </div>
                 <!-- Input for Address -->
+                <!-- Input for City, State, and Postal Code -->
                 <div class="row mb-3 mx-0">
                     <div class="col-md-6">
-                        <label for="City" class="form-label">City</label>
-                        <input type="text" class="form-control" id="City" />
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" required />
                     </div>
                     <div class="col-md-3">
-                        <label for="State" class="form-label">State</label>
-                        <input type="text" class="form-control" id="State" />
+                        <label for="state" class="form-label">State</label>
+                        <select class="form-control" id="state" required>
+                            <option value="">Pick a state</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
                     </div>
                     <div class="col-md-3">
                         <label for="postalCode" class="form-label">Postal Code</label>
-                        <input type="text" class="form-control" id="postalCode" />
+                        <input type="text" class="form-control" id="postalCode" required />
                     </div>
                 </div>
                 <!-- Payments and Message -->
                 <div class="row mb-3 mx-0">
                     <div class="col-md-6">
                         <label class="form-label pt-2">We accept:</label>
-                        <div class="card-icons d-flex gap-2">
-                            <!-- American Express -->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="amex" value="amex">
-                                <label class="form-check-label" for="amex">
-                                    <i class="fab fa-cc-amex fa-2x"></i>
-                                </label>
-                            </div>
-                            <!-- Visa -->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="visa" value="visa">
-                                <label class="form-check-label" for="visa">
-                                    <i class="fab fa-cc-visa fa-2x"></i>
-                                </label>
-                            </div>
-                            <!-- Discover -->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="discover" value="discover">
-                                <label class="form-check-label" for="discover">
-                                    <i class="fab fa-cc-discover fa-2x"></i>
-                                </label>
-                            </div>
-                            <!-- Mastercard -->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard" value="mastercard">
-                                <label class="form-check-label" for="mastercard">
-                                    <i class="fab fa-cc-mastercard fa-2x"></i>
-                                </label>
+                        <div style="width: 345px;">
+                            <div class="card-icons d-flex gap-2 p-2 rounded"
+                                style="background-color: #e9ecef; border: 1px solid #ced4da;">
+                                <!-- American Express -->
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="amex"
+                                        value="amex">
+                                    <label class="form-check-label" for="amex">
+                                        <i class="fab fa-cc-amex fa-2x"></i>
+                                    </label>
+                                </div>
+                                <!-- Visa -->
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="visa"
+                                        value="visa">
+                                    <label class="form-check-label" for="visa">
+                                        <i class="fab fa-cc-visa fa-2x"></i>
+                                    </label>
+                                </div>
+                                <!-- Discover -->
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="discover"
+                                        value="discover">
+                                    <label class="form-check-label" for="discover">
+                                        <i class="fab fa-cc-discover fa-2x"></i>
+                                    </label>
+                                </div>
+                                <!-- Mastercard -->
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard"
+                                        value="mastercard">
+                                    <label class="form-check-label" for="mastercard">
+                                        <i class="fab fa-cc-mastercard fa-2x"></i>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- Message -->
                     <div class="col-md-6">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Add any notes here."></textarea>
+                        <textarea class="form-control" id="message" rows="3"
+                            placeholder="Add any notes here."></textarea>
                     </div>
                 </div>
-                <!-- Footer -->
-                <div class="card-footer border-top">
-                    <div class="d-flex justify-content-end gap-2">
-                        <button type="button" class="btn btn-secondary">Cancel</button>
-                        <button type="button" class="btn btn-primary">Send</button>
-                    </div>
+            </div>
+            <!-- Footer -->
+            <div class="card-footer" style="padding: 20px 16px;">
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="button" class="btn btn-primary">Send</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
